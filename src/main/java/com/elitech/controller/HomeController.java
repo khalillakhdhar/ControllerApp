@@ -2,6 +2,7 @@ package com.elitech.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -27,6 +28,11 @@ public class HomeController {
 	public String findMe(@PathVariable long id)
 	{
 		return "user number "+id;
+	}
+	@PostMapping
+	public String dynamicNaming(@RequestParam String nom)
+	{
+		return "vous avez écrit: "+nom;
 	}
 	
 	
